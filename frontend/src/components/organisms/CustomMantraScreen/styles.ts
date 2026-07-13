@@ -1,0 +1,222 @@
+import { StyleSheet, Platform } from 'react-native';
+import { colors, spacing, typography, borderRadius } from '../../../theme/tokens';
+
+export const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#FFF8F0', // Light cream/beige
+    },
+    flexContainer: {
+        flex: 1,
+    },
+    scrollContent: {
+        paddingTop: 8,
+        flexGrow: 1,
+        paddingBottom: 120,
+    },
+    headerTopContent: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: '100%',
+        paddingHorizontal: spacing.md,
+        marginBottom: spacing.md,
+        marginTop: spacing.xs,
+        position: 'relative',
+    },
+    backButton: {
+        position: 'absolute',
+        left: spacing.md,
+        top: 10,
+        padding: spacing.xs,
+        zIndex: 1,
+    },
+    headerLogoContainer: {
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    logo: {
+        width: 56,
+        height: 56,
+        marginBottom: spacing.xs,
+    },
+    headerText: {
+        fontSize: typography.fontSizes.xl,
+        fontWeight: 'bold',
+        color: '#5D4037',
+        alignSelf: 'center',
+        fontFamily: Platform.OS === 'ios' ? 'Georgia' : 'serif',
+        letterSpacing: 0.5,
+    },
+    contentContainer: {
+        paddingHorizontal: spacing.xl,
+        marginTop: spacing.xl,
+    },
+    titleText: {
+        fontSize: typography.fontSizes.xl,
+        fontWeight: 'bold',
+        color: '#5D4037',
+        textAlign: 'center',
+        marginBottom: spacing.sm,
+        fontFamily: Platform.OS === 'ios' ? 'Georgia' : 'serif',
+    },
+    subtitleText: {
+        fontSize: typography.fontSizes.md,
+        color: '#8D6E63',
+        textAlign: 'center',
+        marginBottom: spacing.xl,
+        lineHeight: 22,
+    },
+    inputContainer: {
+        backgroundColor: '#FFFFFF',
+        borderRadius: 20,
+        borderWidth: 1.5,
+        borderColor: '#D4AF37', // Gold border
+        shadowColor: '#8D6E63',
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.15,
+        shadowRadius: 8,
+        elevation: 4,
+        padding: spacing.md,
+        minHeight: 150,
+    },
+    inputContainerFocused: {
+        borderColor: '#E65100', // Highlight color
+        backgroundColor: '#FFFBEA', // Subtle tint
+        shadowColor: '#E65100',
+        shadowOpacity: 0.2,
+    },
+    textInput: {
+        flex: 1,
+        fontSize: 18,
+        color: '#5D4037',
+        textAlignVertical: 'top',
+        lineHeight: 28,
+        minHeight: 120,
+    },
+    footer: {
+        paddingHorizontal: spacing.xl,
+        backgroundColor: 'transparent',
+    },
+    continueButtonContainer: {
+        width: '100%',
+        borderRadius: borderRadius.xl,
+        shadowColor: '#E65100',
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.3,
+        shadowRadius: 8,
+        elevation: 6,
+        overflow: 'hidden',
+    },
+    continueButton: {
+        paddingVertical: 16,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    continueButtonDisabledContainer: {
+        backgroundColor: '#D7CCC8',
+        shadowOpacity: 0,
+        elevation: 0,
+    },
+    continueButtonDisabled: {
+        backgroundColor: 'transparent',
+    },
+    continueButtonText: {
+        color: colors.neutral[0],
+        fontSize: typography.fontSizes.lg,
+        fontWeight: 'bold',
+        textTransform: 'uppercase',
+        letterSpacing: 1,
+        textShadowColor: 'rgba(0, 0, 0, 0.2)',
+        textShadowOffset: { width: 0, height: 1 },
+        textShadowRadius: 2,
+    },
+    // List Mode Styles
+    listHeader: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginBottom: spacing.md,
+        flexWrap: 'wrap',
+        gap: spacing.md,
+    },
+    addNewButton: {
+        backgroundColor: '#FFF1E6',
+        paddingHorizontal: spacing.md,
+        paddingVertical: spacing.xs,
+        borderRadius: 20,
+        borderWidth: 1,
+        borderColor: '#E65100',
+        flexShrink: 1,
+    },
+    addNewButtonText: {
+        color: '#E65100',
+        fontWeight: 'bold',
+        fontSize: typography.fontSizes.sm,
+        flexWrap: 'wrap',
+    },
+    emptyStateContainer: {
+        alignItems: 'center',
+        paddingVertical: spacing.xxl,
+    },
+    emptyStateText: {
+        color: '#8D6E63',
+        fontSize: typography.fontSizes.md,
+        textAlign: 'center',
+        fontStyle: 'italic',
+        marginBottom: spacing.md,
+    },
+    listItem: {
+        backgroundColor: '#FFFFFF',
+        borderRadius: 16,
+        padding: spacing.md,
+        marginBottom: spacing.sm,
+        borderWidth: 1,
+        borderColor: '#EFEBE9',
+        shadowColor: '#8D6E63',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.1,
+        shadowRadius: 4,
+        elevation: 2,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+    },
+    listItemText: {
+        fontSize: typography.fontSizes.md,
+        color: '#5D4037',
+        flex: 1,
+        lineHeight: 24,
+    },
+    chevron: {
+        marginLeft: spacing.sm,
+    },
+    listItemSelectedContainer: {
+        padding: 0,
+        borderWidth: 0,
+        overflow: 'hidden',
+    },
+    listItemSelectedGradient: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        padding: spacing.md,
+        width: '100%',
+    },
+    listItemTextSelected: {
+        fontSize: typography.fontSizes.md,
+        color: '#FFFFFF',
+        flex: 1,
+        lineHeight: 24,
+        fontWeight: 'bold',
+    },
+    checkmarkContainer: {
+        backgroundColor: '#FFFFFF',
+        borderRadius: 12,
+        padding: 4,
+        marginLeft: spacing.sm,
+        justifyContent: 'center',
+        alignItems: 'center',
+    }
+});

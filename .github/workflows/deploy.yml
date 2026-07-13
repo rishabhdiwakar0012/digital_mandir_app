@@ -1,0 +1,32 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches:
+      - production
+
+jobs:
+  deploy:
+    name: Deploy via Coolify
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger Coolify Deployment
+        run: |
+          echo "✅ Code pushed to production branch — triggering Coolify redeploy..."
+          if [ -n "${{ secrets.COOLIFY_DEPLOY_WEBHOOK }}" ]; then
+            STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+              --max-time 30 \
+              -X GET "${{ secrets.COOLIFY_DEPLOY_WEBHOOK }}")
+            if [ "$STATUS" -ge 200 ] && [ "$STATUS" -lt 300 ]; then
+              echo "✅ Coolify deploy webhook triggered successfully (HTTP $STATUS)"
+            else
+              echo "⚠️  Coolify webhook returned HTTP $STATUS — check Coolify dashboard"
+              exit 1
+            fi
+          else
+            echo "⚠️  COOLIFY_DEPLOY_WEBHOOK secret is not set."
+            echo "→ Go to Coolify dashboard → your backend service → Settings → Deploy Webhook"
+            echo "→ Copy the webhook URL and add it as a GitHub Actions secret named: COOLIFY_DEPLOY_WEBHOOK"
+            echo "→ GitHub repo → Settings → Secrets and variables → Actions → New repository secret"
+          fi

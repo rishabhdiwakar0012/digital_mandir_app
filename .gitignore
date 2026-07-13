@@ -1,0 +1,63 @@
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# Testing
+coverage/
+
+# Production
+build/
+dist/
+
+# Environment files
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Expo
+.expo/
+.expo-shared/
+
+# Native builds
+*.apk
+*.aab
+*.ipa
+
+# TypeScript
+*.tsbuildinfo
+
+# Misc
+.cache
+.parcel-cache
+
+# Local uploaded media (runtime data, not source)
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
+config.bat

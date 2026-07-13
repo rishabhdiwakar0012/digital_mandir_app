@@ -1,0 +1,39 @@
+{
+  "common": {
+    "success": "Operation successful",
+    "error": "An error occurred",
+    "notFound": "Resource not found",
+    "unauthorized": "Unauthorized access",
+    "forbidden": "Access forbidden",
+    "badRequest": "Invalid request",
+    "internalError": "Internal server error"
+  },
+  "auth": {
+    "loginSuccess": "Login successful",
+    "logoutSuccess": "Logout successful",
+    "registerSuccess": "Registration successful",
+    "invalidCredentials": "Invalid email or password",
+    "tokenExpired": "Token has expired",
+    "tokenInvalid": "Invalid token",
+    "emailExists": "Email already registered",
+    "usernameExists": "Username already taken",
+    "passwordMismatch": "Passwords do not match",
+    "accountLocked": "Account has been locked",
+    "emailNotVerified": "Please verify your email first"
+  },
+  "validation": {
+    "required": "{{field}} is required",
+    "email": "Please enter a valid email",
+    "minLength": "{{field}} must be at least {{min}} characters",
+    "maxLength": "{{field}} must not exceed {{max}} characters",
+    "pattern": "{{field}} format is invalid",
+    "unique": "{{field}} already exists"
+  },
+  "user": {
+    "created": "User created successfully",
+    "updated": "User updated successfully",
+    "deleted": "User deleted successfully",
+    "notFound": "User not found",
+    "profileUpdated": "Profile updated successfully"
+  }
+}

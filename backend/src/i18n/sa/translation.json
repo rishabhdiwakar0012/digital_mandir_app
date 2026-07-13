@@ -1,0 +1,39 @@
+{
+  "common": {
+    "success": "कार्यं सफलम्",
+    "error": "दोषः जातः",
+    "notFound": "संसाधनं न प्राप्तम्",
+    "unauthorized": "अनधिकृतः प्रवेशः",
+    "forbidden": "प्रवेशः निषिद्धः",
+    "badRequest": "अमान्यं निवेदनम्",
+    "internalError": "आन्तरिकः सर्वरदोषः"
+  },
+  "auth": {
+    "loginSuccess": "प्रवेशः सफलः",
+    "logoutSuccess": "निर्गमनं सफलम्",
+    "registerSuccess": "पञ्जीकरणं सफलम्",
+    "invalidCredentials": "अमान्यः विद्युत्पत्रः अथवा गुप्तशब्दः",
+    "tokenExpired": "प्रतीकस्य कालः समाप्तः",
+    "tokenInvalid": "अमान्यः प्रतीकः",
+    "emailExists": "विद्युत्पत्रः पूर्वमेव पञ्जीकृतः",
+    "usernameExists": "उपयोक्तृनाम पूर्वमेव गृहीतम्",
+    "passwordMismatch": "गुप्तशब्दाः न सङ्गच्छन्ते",
+    "accountLocked": "खाता बद्धः",
+    "emailNotVerified": "प्रथमं स्व विद्युत्पत्रं प्रमाणयतु"
+  },
+  "validation": {
+    "required": "{{field}} आवश्यकम्",
+    "email": "कृपया वैधं विद्युत्पत्रं प्रविशतु",
+    "minLength": "{{field}} न्यूनतम {{min}} वर्णाः भवितव्याः",
+    "maxLength": "{{field}} {{max}} वर्णेभ्यः अधिकः न भवेत्",
+    "pattern": "{{field}} प्रारूपम् अमान्यम्",
+    "unique": "{{field}} पूर्वमेव विद्यते"
+  },
+  "user": {
+    "created": "उपयोक्ता सफलतया निर्मितः",
+    "updated": "उपयोक्ता सफलतया अद्यतनीकृतः",
+    "deleted": "उपयोक्ता सफलतया अपाकृतः",
+    "notFound": "उपयोक्ता न प्राप्तः",
+    "profileUpdated": "प्रोफाइल सफलतया अद्यतनीकृता"
+  }
+}

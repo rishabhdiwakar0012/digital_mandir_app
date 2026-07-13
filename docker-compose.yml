@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:7
+    restart: unless-stopped
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongodb_data:/data/db
+    environment:
+      MONGO_INITDB_DATABASE: mantra_jaap
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    restart: unless-stopped
+    ports:
+      - '3000:3000'
+    depends_on:
+      - mongodb
+    environment:
+      NODE_ENV: production
+      MONGODB_URI: mongodb://mongodb:27017/mantra_jaap
+      JWT_SECRET: ${JWT_SECRET:-change_me_in_production}
+      JWT_EXPIRES_IN: ${JWT_EXPIRES_IN:-15m}
+      JWT_REFRESH_EXPIRES_IN: ${JWT_REFRESH_EXPIRES_IN:-7d}
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-admin@mantrajaap.com}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-Admin@123}
+      ADMIN_PHONE: ${ADMIN_PHONE:-+919999999999}
+      SMS_PROVIDER: ${SMS_PROVIDER:-console}
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID}
+      GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET}
+      GOOGLE_IOS_CLIENT_ID: ${GOOGLE_IOS_CLIENT_ID}
+      GOOGLE_ANDROID_CLIENT_ID: ${GOOGLE_ANDROID_CLIENT_ID}
+
+  admin:
+    build:
+      context: .
+      dockerfile: admin/Dockerfile
+    restart: unless-stopped
+    ports:
+      - '3001:3001'
+    depends_on:
+      - backend
+    environment:
+      NEXT_PUBLIC_API_URL: http://backend:3000
+
+volumes:
+  mongodb_data:

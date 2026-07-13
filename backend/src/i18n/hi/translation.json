@@ -1,0 +1,39 @@
+{
+  "common": {
+    "success": "कार्य सफल",
+    "error": "एक त्रुटि हुई",
+    "notFound": "संसाधन नहीं मिला",
+    "unauthorized": "अनधिकृत पहुंच",
+    "forbidden": "पहुंच निषिद्ध",
+    "badRequest": "अमान्य अनुरोध",
+    "internalError": "आंतरिक सर्वर त्रुटि"
+  },
+  "auth": {
+    "loginSuccess": "लॉगिन सफल",
+    "logoutSuccess": "लॉगआउट सफल",
+    "registerSuccess": "पंजीकरण सफल",
+    "invalidCredentials": "अमान्य ईमेल या पासवर्ड",
+    "tokenExpired": "टोकन की समय सीमा समाप्त हो गई है",
+    "tokenInvalid": "अमान्य टोकन",
+    "emailExists": "ईमेल पहले से पंजीकृत है",
+    "usernameExists": "उपयोगकर्ता नाम पहले से लिया गया है",
+    "passwordMismatch": "पासवर्ड मेल नहीं खाते",
+    "accountLocked": "खाता लॉक कर दिया गया है",
+    "emailNotVerified": "कृपया पहले अपना ईमेल सत्यापित करें"
+  },
+  "validation": {
+    "required": "{{field}} आवश्यक है",
+    "email": "कृपया एक वैध ईमेल दर्ज करें",
+    "minLength": "{{field}} कम से कम {{min}} वर्ण होना चाहिए",
+    "maxLength": "{{field}} {{max}} वर्णों से अधिक नहीं होना चाहिए",
+    "pattern": "{{field}} प्रारूप अमान्य है",
+    "unique": "{{field}} पहले से मौजूद है"
+  },
+  "user": {
+    "created": "उपयोगकर्ता सफलतापूर्वक बनाया गया",
+    "updated": "उपयोगकर्ता सफलतापूर्वक अपडेट किया गया",
+    "deleted": "उपयोगकर्ता सफलतापूर्वक हटाया गया",
+    "notFound": "उपयोगकर्ता नहीं मिला",
+    "profileUpdated": "प्रोफ़ाइल सफलतापूर्वक अपडेट की गई"
+  }
+}

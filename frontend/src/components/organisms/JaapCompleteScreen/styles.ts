@@ -1,0 +1,148 @@
+import { StyleSheet, Dimensions, Platform } from 'react-native';
+
+const { width, height } = Dimensions.get('window');
+const isSmallDevice = width < 380;
+const isExtraSmallScreen = height < 680;
+
+export const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#FFFFFF',
+    },
+    header: {
+        flexDirection: 'column',
+        paddingHorizontal: 16,
+        paddingBottom: 8,
+        backgroundColor: '#FFFFFF',
+        zIndex: 10,
+    },
+    headerTopContent: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: '100%',
+        marginBottom: 16,
+        marginTop: 4,
+        position: 'relative',
+    },
+    backButton: {
+        position: 'absolute',
+        left: 0,
+        top: 10,
+        padding: 4,
+        zIndex: 1,
+    },
+    headerLogoContainer: {
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    logo: {
+        width: 56,
+        height: 56,
+        marginBottom: 4,
+    },
+    headerText: {
+        fontSize: isExtraSmallScreen ? 18 : 20,
+        fontWeight: 'bold',
+        color: '#5D4037',
+        alignSelf: 'center',
+        fontFamily: Platform.OS === 'ios' ? 'Georgia' : 'serif',
+        letterSpacing: 0.5,
+    },
+    contentContainer: {
+        flex: 1,
+        alignItems: 'center',
+        paddingTop: 10,
+        justifyContent: 'center',
+    },
+    image: {
+        width: width * 0.6,
+        height: width * 0.6,
+        maxHeight: isExtraSmallScreen ? 200 : 280,
+        marginBottom: isExtraSmallScreen ? 12 : 20,
+    },
+    title: {
+        fontSize: isSmallDevice ? 20 : 24,
+        fontWeight: '900',
+        color: '#FFA14A',
+        letterSpacing: 0.5,
+        marginBottom: isExtraSmallScreen ? 16 : 24,
+        textAlign: 'center',
+    },
+    statsContainer: {
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        paddingHorizontal: 8,
+        justifyContent: 'center',
+        width: '100%',
+        marginBottom: isSmallDevice ? 8 : 16,
+    },
+    card: {
+        width: '44%',
+        marginHorizontal: '2%',
+        marginBottom: 16,
+        borderRadius: 16,
+        borderWidth: 2,
+        backgroundColor: '#FFFFFF',
+        elevation: 4,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.1,
+        shadowRadius: 4,
+    },
+    cardHeader: {
+        paddingVertical: 8,
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderTopLeftRadius: 13,
+        borderTopRightRadius: 13,
+    },
+    cardHeaderText: {
+        color: '#FFFFFF',
+        fontSize: isSmallDevice ? 10 : 12,
+        fontWeight: '800',
+        letterSpacing: 0.5,
+        textTransform: 'uppercase',
+    },
+    cardBody: {
+        flexDirection: 'row',
+        paddingVertical: isSmallDevice ? 10 : 16,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    iconWrapper: {
+        marginRight: 6,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    statValue: {
+        fontSize: isSmallDevice ? 20 : 24,
+        fontWeight: '900',
+    },
+    footer: {
+        paddingHorizontal: 20,
+        paddingBottom: 40,
+        width: '100%',
+    },
+    button: {
+        backgroundColor: '#FA9A3E',
+        borderRadius: 12,
+        height: 56,
+        alignItems: 'center',
+        justifyContent: 'center',
+        elevation: 2,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.2,
+        shadowRadius: 3,
+        borderBottomWidth: 4,
+        borderBottomColor: '#D8731F',
+    },
+    buttonText: {
+        color: '#FFFFFF',
+        fontSize: 16,
+        fontWeight: 'bold',
+        letterSpacing: 0.5,
+    },
+});

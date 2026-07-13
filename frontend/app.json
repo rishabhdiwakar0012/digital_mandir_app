@@ -1,0 +1,69 @@
+{
+  "expo": {
+    "name": "Digital Mandir",
+    "slug": "digital-mandir",
+    "version": "1.0.25",
+    "extra": {
+      "eas": {
+        "projectId": "YOUR_EXPO_PROJECT_ID_HERE"
+      }
+    },
+    "scheme": "digitalmandir",
+    "deepLinkingScheme": "digitalmandir",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "package": "com.digitalmandir.app",
+      "softInputMode": "adjustResize",
+      "googleServicesFile": "./android/app/google-services.json",
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": {
+            "scheme": "https",
+            "host": "*.exp.direct"
+          },
+          "category": ["BROWSABLE", "DEFAULT"]
+        },
+        {
+          "action": "VIEW",
+          "data": {
+            "scheme": "digitalmandir"
+          },
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "./plugins/withSigningConfig",
+      "@react-native-google-signin/google-signin",
+      "expo-web-browser",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/ic_stat_adaptive_icon.png",
+          "color": "#FF9933",
+          "defaultChannel": "default"
+        }
+      ]
+    ]
+  }
+}
